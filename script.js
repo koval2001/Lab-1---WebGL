@@ -72,8 +72,6 @@ function drawFigure(vertices, type, axes, numberFig) {
 
     /*============ Drawing the triangle =============*/
 
-    //gl.enable(gl.DEPTH_TEST);
-
     if(type === "stroke") {
         gl.drawArrays(gl.LINE_STRIP, 0, numberFig);
     } else {
@@ -156,7 +154,7 @@ function handleButtonClick(e) {
     }
 
     if (changed) {
-        drawFigure(verticesStroke,"stroke", 2, 25);
         drawFigure(verticesTriangles,"filling", 3, 27);
+        drawFigure(verticesStroke,"stroke", 2, 25);
     }
 }
